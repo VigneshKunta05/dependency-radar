@@ -1,0 +1,23 @@
+{
+  "name": "dependency-radar",
+  "version": "1.0.0",
+  "description": "Graph-based dependency and contributor explorer powered by CognoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "neo4j-driver": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

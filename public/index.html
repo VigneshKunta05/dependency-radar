@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dependency Radar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div>
+        <h1>Dependency Radar</h1>
+        <p>Explore package dependencies, contributors, and blast radius.</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="search-section">
+        <label for="packageSelect">Select a package</label>
+
+        <select id="packageSelect">
+            <option value="">Loading packages...</option>
+        </select>
+
+        <button id="analyzeButton">
+            Analyze Package
+        </button>
+    </section>
+
+    <div id="status" class="status"></div>
+
+    <section class="stats">
+
+        <div class="card">
+            <h3>Direct Dependencies</h3>
+            <p id="dependencyCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Blast Radius</h3>
+            <p id="blastCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Contributors</h3>
+            <p id="contributorCount">0</p>
+        </div>
+
+    </section>
+
+    <section class="panel">
+        <h2>Dependency Graph</h2>
+
+        <div id="graph"></div>
+    </section>
+
+    <section class="grid">
+
+        <div class="panel">
+            <h2>Dependencies</h2>
+            <div id="dependencies"></div>
+        </div>
+
+        <div class="panel">
+            <h2>Blast Radius</h2>
+            <div id="blastRadius"></div>
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Contributors</h2>
+
+        <div id="contributors"></div>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Dependency Chain</h2>
+
+        <div id="dependencyChain"></div>
+
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
